@@ -2,6 +2,7 @@ package lexer
 
 import (
 	"monke/token"
+	"time"
 )
 
 type Lexer struct {
@@ -102,6 +103,7 @@ func (l *Lexer) NextToken() token.Token {
 
 // increments the readPosition and assigns the next readable char in l.ch
 func (l *Lexer) readChar() {
+    time.Sleep(10000)
     if l.readPosition >= len(l.input) {
         l.ch = 0;
     } else {
